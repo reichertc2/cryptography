@@ -2,13 +2,13 @@ from cryptography.cryptography import encrypt, decrypt, crack
 import pytest
 
 
-@pytest.mark.skip(reason='not yet')
+# @pytest.mark.skip(reason='not yet')
 def test_initiaization():
     assert encrypt
     assert decrypt
     assert crack
 
-@pytest.mark.skip(reason='not yet')
+# @pytest.mark.skip(reason='not yet')
 def test_encrypt_shift_1():
     actual = encrypt("apple", 1)
     expected = "bqqmf"
