@@ -1,18 +1,20 @@
-from cryptography.corpus_loader import word_list, name_list
+# from cryptography.corpus_loader import word_list, name_list
 import re
-
 
 
 def encrypt(plain,key):
     intial_phrase = plain.split()
-    # word_count = 0
-
+    letters_list = []
     for word in intial_phrase:
         mod_word = re.sub(r'[^A-Za-z]+','', word)
-        num_word = mod_word.ascii_letters
-        print(num_word)
-    
-    
+        for num_let in mod_word:
+            num_word = num_let.split()
+            for letter in num_word:
+                number = int(ord(letter))
+                new_num = (number + key)
+                letters_list.append(chr(new_num))
+    encoded_phrase = ''.join(letters_list)
+    return encoded_phrase
 
 
 
@@ -26,4 +28,4 @@ def decrypt(encode,key):
 def crack(encode):
     pass
 
-encrypt("apple", 1)
+print(encrypt("apple", 1))

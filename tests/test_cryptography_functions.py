@@ -14,7 +14,7 @@ def test_encrypt_shift_1():
     expected = "bqqmf"
     assert actual == expected
 
-@pytest.mark.skip(reason='not yet')
+# @pytest.mark.skip(reason='not yet')
 def test_encrypt_shift_10():
     actual = encrypt("apple", 10)
     expected = "kzzvo"
@@ -26,7 +26,7 @@ def test_encrypt_shift_20():
     expected = "ujjfy"
     assert actual == expected
 
-@pytest.mark.skip(reason='not yet')
+# @pytest.mark.skip(reason='not yet')
 def test_uppercase():
     actual = encrypt("BANANA", 10)
     expected = "LKXKXK"
