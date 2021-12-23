@@ -12,6 +12,13 @@ def encrypt(plain,key):
             for letter in num_word:
                 number = int(ord(letter))
                 new_num = (number + key)
+                print('new_num prior to sort: ',new_num)
+                if new_num > 122 or new_num < 97:
+                    new_num = new_num - 26
+                    print('new_num: lower case:',new_num)
+                if new_num < 90 and new_num < 97:
+                    new_num = new_num - 26
+                    print('new_num: upper case:',new_num)
                 letters_list.append(chr(new_num))
     encoded_phrase = ''.join(letters_list)
     return encoded_phrase
@@ -28,4 +35,4 @@ def decrypt(encode,key):
 def crack(encode):
     pass
 
-print(encrypt("apple", 1))
+print(encrypt("BANANA", 10))
