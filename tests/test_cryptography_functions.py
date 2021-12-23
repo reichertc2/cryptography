@@ -2,25 +2,25 @@ from cryptography.cryptography import encrypt, decrypt, crack
 import pytest
 
 
-@pytest.mark.skip(reason='not yet')
+# @pytest.mark.skip(reason='not yet')
 def test_initiaization():
     assert encrypt
     assert decrypt
     assert crack
 
-@pytest.mark.skip(reason='not yet')
+# @pytest.mark.skip(reason='not yet')
 def test_encrypt_shift_1():
     actual = encrypt("apple", 1)
     expected = "bqqmf"
     assert actual == expected
 
-@pytest.mark.skip(reason='not yet')
+# @pytest.mark.skip(reason='not yet')
 def test_encrypt_shift_10():
     actual = encrypt("apple", 10)
     expected = "kzzvo"
     assert actual == expected
 
-@pytest.mark.skip(reason='not yet')
+# @pytest.mark.skip(reason='not yet')
 def test_encrypt_shift_20():
     actual = encrypt("apple", 20)
     expected = "ujjfy"
